@@ -1,40 +1,52 @@
+const moves = ["ROCK", "PAPER" ,"SCISSORS"] ;
+let computerSelection;
+let playerMove = document.querySelector("#player-move");
+let humanPick = document.querySelector("#human-pick");
+let computerPick = document.querySelector("#computer-pick")
+let winner = document.querySelector("#winner")
+let gameButton = document.querySelector("#game")
 
-let computerPick = document.getElementById ("computer-pick") ;
-let humanPick = document.getElementById ("human-pick") ;
-let gameWinner = document.getElementById("winner") ;
-let  i = Math.floor(Math.random()*3);
-let humanSelection ;
-let humanMove;
 
 
 function computerPlay(){
-    let moves = ["Rock", "Paper" ,"Scissors"] ;
-    let computerSelection = moves[i]
-    computerPick.textContent ="Computer picked : " + computerSelection + " !";
-
-    console.log(computerSelection);
+    let  i = Math.floor(Math.random()*3);
+    computerSelection = moves[i] ;
+    computerPick.innerText = "Computer picked: " + computerSelection + "!";
 } 
-computerPlay();
 
+
+gameButton.addEventListener("click", () => {
+    humanPick.innerText = "You picked: " + playerMove.value + "!";
+}
+)
 
 function game(){
-    humanMove = document.getElementById("myText").value ;
-    humanPick.textContent ="You picked : " + humanMove + " !";
+    computerPlay();
+    let message ;
+    let human = playerMove.value;
+    human = human.toUpperCase();
+    
+    if (human == computerSelection){
+        message = "It's a Tie " ;
+    } else if (human == "ROCK" && computerSelection =="PAPER"){
+        message = "You Lost" ;
+    } else if (human == "PAPER" && computerSelection =="SCISSORS"){
+        message = "You Lost" ;
+    } else if (human == "SCISSORS" && computerSelection =="ROCK"){
+        message = "You Lost" ;
+    }else if (human == "SCISSORS" && computerSelection =="PAPER"){
+        message = "You Won" ;
+    }else if (human == "ROCK" && computerSelection =="SCISSORS"){
+        message = "You Won" ;
+    }else if (human == "PAPER" && computerSelection =="ROCK"){
+        message = "You Won" ;} 
+        else {
+            message = "Check your Answer"
+        }
  
 
-    if (humanMove == "Rock"){
-        return humanSelection = 0 ;
-    }
-    else if (humanMove == "Paper"){
-        return humanSelection = 1 ;
-    }
-    else if (humanMove == "Scissors"){
-        return humanSelection = 2 ;
-    }
-    else {
-        return humanSelection = 3;
-    }
 
-
+console.log(human);
+console.log(computerSelection);
+winner.innerText = "Result: " + message + "!"
 }
-console.log(humanMove)
