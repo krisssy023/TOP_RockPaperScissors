@@ -1,0 +1,21 @@
+body{
+
+   
+    margin : 70px ;
+    text-align: center;
+   background-image:
+}
+
+#move-input{
+    padding : 50px;
+}
+
+#pick , #score {
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+#results {
+    padding: 30px;
+}
