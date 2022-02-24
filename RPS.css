@@ -1,10 +1,20 @@
-body{
 
-   
-    margin : 70px ;
+
+body{
+    background-image: url("images/catbg.jpeg");
+    background-position:bottom;
+    background-repeat: no-repeat; 
+    background-size: 10% ; 
+    background-color: antiquewhite;
+    margin-top : 70px ;
+    margin-bottom: 100px;
+    padding-bottom: 30px;
     text-align: center;
-   background-image:
+    
+ 
 }
+
+
 
 #move-input{
     padding : 50px;

@@ -9,9 +9,11 @@ let gameButton = document.querySelector("#game");
 let triesLeft = document.querySelector("#tries-left");
 const yourScoreCount = document.querySelector("#your-score")
 const computerScoreCount = document.querySelector("#computer-score")
-let tryAgain = document.querySelector("#try-again")
+let tryAgain = document.querySelector("#try-again");
+let roundNumber = document.querySelector("#round-number");
 let message ;
 let tries = 4 ;
+let round = 1 ;
 let yourScore = 0 ;
 let computerScore = 0 ;
 
@@ -37,19 +39,30 @@ function gameScoreCount(){
     yourScoreCount.textContent = "Your Score : " + yourScore ;
     computerScoreCount.textContent = "Computer's Score : " + computerScore ;
 
-
+    console.log(computerScore);
+    console.log(yourScore);
 }
 
 gameButton.addEventListener("click", () => {
     humanPick.innerText = "You picked: " + playerMove.value + "!";
+
+    
+
+    round += 1 ;
+
     tries -= 1 ;
+
+    if (round == 6){
+        finalGameResults();
+        roundNumber.innerText = "Game Done !" ;
+    } else {
+        roundNumber.innerText = "Round #  " +round;
+    }
 }
 )
 
 function game(){
     computerPlay();
-
-    let finalMessage ;
    
     let human = playerMove.value;
     human = human.toUpperCase();
@@ -72,13 +85,11 @@ function game(){
             message = "Check your Answer"
         }
  
+if(tries == -1){
+    location.reload(true);
+}
 
-
-   if (tries == 0){
-       finalGameResults()
-   } else if(tries == -1)(
-    location.reload(true)
-   )
+   
     
 gameScoreCount() ;
 triesContent();
@@ -89,20 +100,21 @@ roundResults.innerText = "Round Results: " + message + "!"
 
 
 function finalGameResults(){
+let finalMessage ;
 
-    if (yourScore > computerScore){
-        finalMessage = "You Won the Game ! Try again ?"
-    } else if (computerScore > yourScore){
+    if (yourScore == computerScore){
+        finalMessage = "It's a tie , try again?"
+    }else if (computerScore > yourScore){
         finalMessage = "You Lost, try again ?"
     } else {
-        finalMessage = " It's a tie , try again?"
-    }
-
+        finalMessage = "You Won the Game ! Try again ?"}
 
     finalResult.textContent = "Final Game Results :" + finalMessage;
     
+
 }
 
 function tryAgainButton(){
     location.reload(true);
 }
+
