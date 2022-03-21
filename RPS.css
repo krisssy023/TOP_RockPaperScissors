@@ -6,25 +6,46 @@ body{
     background-repeat: no-repeat; 
     background-size: 20% ; 
     background-color: antiquewhite;
-    margin-top : 70px ;
-    margin-bottom: 100px;
-    padding-bottom: 30px;
+    margin-top : 20px ;
+    margin-bottom: 180px;
+    padding-bottom: 20px;
     text-align: center;
+    display:flexbox;
+    font-size: 15px;
     
- 
 }
 
+
+
 img{
-    
     height : 150px ;
     width : auto ;
-    
 }
 
 img:hover {
     height : 170px ;
     width : auto ;
     
+}
+#computerFighterPic{
+    height : 160px ;
+    width : auto ;
+}
+
+#computer{
+margin-right: -210px;
+}
+
+#pick , #score {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -80px;
+    
+
+}
+
+#results {
+    padding: 30px;
 }
 
 #rps-pick {
@@ -34,12 +55,42 @@ img:hover {
     padding-right: 150px;
 }
 
-#pick , #score {
-    display: flex;
-    justify-content: space-evenly;
-   
-}
+@media screen and (max-width: 667px) {
+    body {
+        background-size: 30% ;
+        margin-top : 10px ;
+        font-size: 13px;
+    }
 
-#results {
-    padding: 30px;
-}
+    #header {
+        font-size: 10px;
+    }
+
+    img{
+        height : 100px ;
+        width : auto ;
+    }
+    
+    img:hover {
+        height : 103px ;
+        width : auto ;  
+    }
+
+    #computerFighterPic{
+        height : 103px ;
+        width : auto ;
+    }
+
+    #rps-pick {
+        padding-left: 5px;
+        padding-right: 50px;
+    }
+
+    #pick , #score {
+        padding-left: 15px; 
+    }
+
+    #results {
+        padding: 0px;
+    }
+  }
