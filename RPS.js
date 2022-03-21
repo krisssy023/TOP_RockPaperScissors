@@ -1,6 +1,6 @@
 const moves = ["ROCK", "PAPER" ,"SCISSORS"] ;
 let computerSelection;
-let playerMove = document.querySelector("#player-move");
+let playerMove ;
 let humanPick = document.querySelector("#human-pick");
 let computerPick = document.querySelector("#computer-pick") ;
 let roundResults = document.querySelector("#round-results");
@@ -16,11 +16,25 @@ let tries = 4 ;
 let round = 1 ;
 let yourScore = 0 ;
 let computerScore = 0 ;
+let human ;
 
 function computerPlay(){
     let  i = Math.floor(Math.random()*3);
     computerSelection = moves[i] ;
     computerPick.innerText = "Computer picked: " + computerSelection + "!";
+   
+
+    if(i === 0){
+        document.getElementById("computerFighterPic").src = "images/rock.JPG";
+    } else if ( i === 1){
+        document.getElementById("computerFighterPic").src = "images/paper.JPG";
+    }else if( i === 2) {
+        document.getElementById("computerFighterPic").src = "images/scissor.JPG";
+    } else {
+        document.getElementById("computerFighterPic").src =" images/rps.gif"
+    }
+    
+    
 } 
 
 
@@ -43,10 +57,8 @@ function gameScoreCount(){
     console.log(yourScore);
 }
 
-gameButton.addEventListener("click", () => {
-    humanPick.innerText = "You picked: " + playerMove.value + "!";
-
-    
+function roundAndTriesCounter() {
+    humanPick.innerText = "You picked: " + playerMove + "!";
 
     round += 1 ;
 
@@ -59,14 +71,35 @@ gameButton.addEventListener("click", () => {
         roundNumber.innerText = "Round #  " +round;
     }
 }
-)
+
+
+function rock(){
+    human = "ROCK";
+    playerMove = "ROCK";
+    game();
+    roundAndTriesCounter() ;
+
+}
+
+function paper(){
+    human = "PAPER";
+    playerMove = "PAPER" ;
+    game();
+    roundAndTriesCounter() ;
+
+}
+
+function scissors(){
+    human = "SCISSORS";
+    playerMove = "SCISSORS"
+    game();
+    roundAndTriesCounter() ;
+
+}
 
 function game(){
     computerPlay();
    
-    let human = playerMove.value;
-    human = human.toUpperCase();
-    
     if (human == computerSelection){
         message = "It's a Tie " ;
     } else if (human == "ROCK" && computerSelection =="PAPER"){
@@ -97,7 +130,6 @@ console.log(human);
 console.log(computerSelection);
 roundResults.innerText = "Round Results: " + message + "!"
 }
-
 
 function finalGameResults(){
 let finalMessage ;

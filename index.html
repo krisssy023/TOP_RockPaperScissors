@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title> Rock Paper Scissors</title>
     <link rel="stylesheet" href="RPS.css">
 </head>
 <body class="background">
     
 
     <div id = "header">
-         <h1>let's play rock, paper, scissors</h1>
-        <h2>type your pick below :</h2>
+         <h1>let's play rock, paper, scissors 🐱</h1>
+        <h2>pick your fighter !</h2>
     </div>
 
-    <div id = "move-input">
+   <!--- <div id = "move-input">
         <input type="text" id="player-move" placeholder="your move ...">  
         <button id ="game" onclick="game()">game!</button>
     </div>
-
+-->
     <div id = "pick">
         <h3 id = "human-pick">You picked : </h3>
-         <h3 id = "computer-pick" >Computer picked : </h3>
+        <h3 id = "computer-pick" >Computer picked : </h3>
         
     </div>
 
+    <div id = "rps-pick" class ="image">
+        <div class="player-fighter">
+         <img id ="lala" src ="images/rock.JPG" alt= "rock" onclick="rock()">
+         <img id ="benny" src ="images/paper.JPG" alt= "paper" onclick="paper()">
+         <img id ="mimi" src="images/scissor.JPG" alt="scissors" onclick = "scissors()">
+         </div>
+
+        <div class ="computer-fighter">
+            <img id="computerFighterPic" src="images/rps.gif">
+        </div>
+    </div>
     
+    
+
     <div id="score">
          <h3 id ="your-score">Your Score : 0 </h3>
          <h3 id ="computer-score">Computer's Score : 0 </h3>

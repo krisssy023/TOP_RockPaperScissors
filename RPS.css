@@ -1,10 +1,10 @@
 
 
 body{
-    background-image: url("images/catbg.jpeg");
+    background-image: url("images/3bebes.jpg");
     background-position:bottom;
     background-repeat: no-repeat; 
-    background-size: 10% ; 
+    background-size: 20% ; 
     background-color: antiquewhite;
     margin-top : 70px ;
     margin-bottom: 100px;
@@ -14,10 +14,24 @@ body{
  
 }
 
+img{
+    
+    height : 150px ;
+    width : auto ;
+    
+}
 
+img:hover {
+    height : 170px ;
+    width : auto ;
+    
+}
 
-#move-input{
-    padding : 50px;
+#rps-pick {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-right: 150px;
 }
 
 #pick , #score {
