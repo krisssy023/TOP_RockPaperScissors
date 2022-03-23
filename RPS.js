@@ -117,7 +117,19 @@ function game(){
      else {
             message = "Check your Answer"
         }
+
+    
+    if (message === "You Won"){
+        roundResults.style.color = "green";
+    } else if (message === "You Lost"){
+        roundResults.style.color = "red";
+    } else {
+        roundResults.style.color = "black";
+    }
  
+
+
+
 if(tries == -1){
     location.reload(true);
 }
@@ -139,10 +151,19 @@ let finalMessage ;
     }else if (computerScore > yourScore){
         finalMessage = "You Lost, try again ?"
     } else {
-        finalMessage = "You Won the Game ! Try again ?"}
+        finalMessage = "You Won the Game ! Try again ?"
+    }
+
+    if(finalMessage === "You Won the Game ! Try again ?"){
+        finalResult.style.color = "green";
+    } else if (finalMessage === "You Lost, try again ?"){
+        finalResult.style.color = "red";
+    } else {
+        finalResult.style.color = "black";
+    }
+
 
     finalResult.textContent = "Final Game Results :" + finalMessage;
-    
 
 }
 

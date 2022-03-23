@@ -1,10 +1,9 @@
-
-
+/* for macbook air screen*/
 body{
     background-image: url("images/3bebes.jpg");
     background-position:bottom;
     background-repeat: no-repeat; 
-    background-size: 20% ; 
+    background-size: 10% ; 
     background-color: antiquewhite;
     margin-top : 20px ;
     margin-bottom: 180px;
@@ -14,8 +13,6 @@ body{
     font-size: 15px;
     
 }
-
-
 
 img{
     height : 150px ;
@@ -28,20 +25,24 @@ img:hover {
     
 }
 #computerFighterPic{
+
     height : 160px ;
     width : auto ;
 }
 
 #computer-pick, #computer-score{
-margin-right: -210px;
+margin-right: -60px;
 }
 
-
+#header{
+padding-bottom :50px;
+padding-top :20px;
+}
 
 #pick , #score {
     display: flex;
     justify-content: space-evenly;
-    margin-left: -80px; 
+    margin-left: 20px; 
 
 }
 
@@ -52,10 +53,11 @@ margin-right: -210px;
 #rps-pick {
     display: flex;
     justify-content: space-between;
-    padding-left: 70px;
-    padding-right: 150px;
+    padding-left: 220px;
+    padding-right:340px;
 }
 
+/*
 @media screen and (max-width: 600px) {
     html{
         width:100%;
@@ -95,7 +97,8 @@ margin-right: -210px;
     }
 
     #computer-pick, #computer-score{
-        margin-right: -210px;
+        margin-right: 10px;
+        m
     }
 
     #pick , #score {
@@ -105,7 +108,5 @@ margin-right: -210px;
     
     }
     
-
-  
-  
   }
+  */
