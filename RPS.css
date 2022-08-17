@@ -17,6 +17,7 @@ body{
 img{
     height : 150px ;
     width : auto ;
+    padding: 5%;
 }
 
 img:hover {
