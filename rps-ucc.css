@@ -1,13 +1,24 @@
-.cards{
-    width: 70%;
+.bot-pick{
+    padding-top:25%;
 }
+
+.cards{
+    width: 80%;
+}
+
+.card-body{
+    padding: 2%;
+}
+
 .player-cards{
     margin: 5%;
     
 }
 
 .player-text{
-    font-size: 50%;
+    font-size: 70%;
+    margin: 0;
+    padding: 0;
 }
 
 
