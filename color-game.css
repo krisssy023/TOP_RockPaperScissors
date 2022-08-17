@@ -1,10 +1,8 @@
 
-.red{
-    background-color: red;
-}
 
 .blue{
     background-color: blue;
+    color:white;
 }
 
 .hidden-message{
@@ -12,7 +10,7 @@
 }
 
 .btn{
-    
+    width:6.5rem;
     margin:5px;
 }
 
@@ -26,6 +24,7 @@
     color:white;
     font-size: 25px;
     border-radius: 30%;
+    width:11rem;
 }
 
 .orange{
