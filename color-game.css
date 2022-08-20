@@ -1,62 +1,53 @@
 
-
-.blue{
-    background-color: blue;
-    color:white;
+#color-box{
+    height: 5rem;
+    padding: 5rem;
+    color:red;
+   
+    
 }
 
-.hidden-message{
-    padding:5px;
+#winning-color{
+    font-size: 20px;
+    padding:1rem;
 }
 
-.btn{
-    width:6.5rem;
-    margin:5px;
+#rainbow-gif{
+    width: 9rem;
 }
 
-.black{
-    background-color: black;
-    color:white;
+#color-container{
+    padding-top: 3rem;
 }
 
-.go{
-    background-color: darkgreen;
-    color:white;
-    font-size: 25px;
-    border-radius: 30%;
-    width:11rem;
+.color-picker{
+    height : 4rem;
+    padding: 1rem;
+    
 }
 
-.orange{
-    background-color:orangered;
-    color:white;
+
+
+.betting-boxes{
+    margin-top: 3rem;
 }
 
-.pink {
-    background-color: pink;
+#push-button{
+    height : 5rem;
+    padding: 1rem;
+    margin: 3rem;
 }
 
-.violet{
-    background-color: blueviolet;
-    color:white;
+.intro{
+    height:5rem;
+    font-size: 20px;
 }
+
+
 
 @media only screen and (min-width: 1920px) {
-    /* For desktop: */
-   .random-gif{
-    width:20rem;
-   }
-
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-  }
+    .color-picker{
+        height : 7rem;
+        padding: 3rem;
+    }
+}
